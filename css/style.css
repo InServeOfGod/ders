@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#baseMarquee {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+
+textarea {
+    resize: both;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <title> Fonksiyon </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+</head>
+<body>
+    <pre>
+        <script>
+            adi="Barıs manco "
+            sehir="istanbul"
+            semt="Kadıkoy"
+
+            document.writeln("Ismi..............:"+adi)
+            document.writeln("semti.............:"+semt)
+            document.writeln("Uzunlugu..........:"+adi.length)
+            document.writeln("4.harf............:"+adi.charAt(3))
+            document.writeln("ilk yeri..........:"+semt.indexOf("al"))
+            document.writeln("isimde boşluk yeri:"+adi.indexOf(" "))
+            document.writeln("ilk 4 karekter....:"+adi.substring(0,4))
+            document.writeln("3.karekter........:"+adi.substring(3,1))
+            document.writeln("Koyu..............:"+adi.bold())
+            document.writeln("Italik............:"+adi.italics())
+            document.writeln("Italik,koyu.......:"+adi.bold().italics())
+            document.writeln("Renkli............:"+adi.bold().fontcolor("red"))
+            document.writeln("Koyu,buyuk........:"+adi.bold().fontsize("5"))
+            document.writeln("Koyu,buyuk,yesil..:"+adi.bold().fontcolor("green").fontsize("4"))
+            document.writeln("Kucuk.............:"+adi.toLowerCase())
+            document.writeln("Buyuk.............:"+adi.toUpperCase())
+            document.writeln("deger...:", parseInt("1234.567"))
+            document.writeln("deger...:", parseFloat("1234.567"))
+            aa=100
+            document.writeln("alfasal sayıya cevirme...:", aa.toString())
+            document.writeln("alfasal sayıyı parcalama.:", (aa.toString()).substr(0,2) )
+            document.writeln("kusuratı atma...:" + parseInt((parseFloat("1234.567")*100).toString())/100 )
+    </script>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js" type="text/javascript"></script>
+    <title>Form Example 1</title>
+
+    <script type="text/javascript">
+        const login = () => {
+            Swal.fire({
+                title: 'Bilgi',
+                text: 'login yapıldı.',
+                icon: 'info',
+                confirmButtonText: 'Tamam'
+            })
+        }
+
+        const report = () => {
+            Swal.fire({
+                title: 'Bilgi',
+                text: 'rapor veriliyor...',
+                icon: 'info',
+                confirmButtonText: 'Tamam'
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="fw-bold text-primary">Giriş sistemi</h1>
+
+                <form action="" method="get">
+                    <div class="btn-group-sm">
+                        <input type="button" value="giriş" onclick="login()" class="btn btn-success btn-sm">
+                        <input type="button" value="rapor" onclick="report()" class="btn btn-primary btn-sm">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js" type="text/javascript"></script>
+</body>
+</html>

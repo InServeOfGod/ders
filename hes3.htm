@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title> hesap makinasý </title>
+</head>
+<style>
+input[type="button"] {
+    width: 100px;
+    }
+</style>
+<script>
+var sonuc,a,b,islem;
+function topla (){
+ sonuc = parseInt(a)+ parseInt(b);
+}
+function carp(){
+sonuc = parseInt(a) * parseInt(b);
+}
+
+function bol(){
+sonuc = parseInt(a) / parseInt(b);
+}
+
+function cik(){
+sonuc = parseInt(a) - parseInt(b);
+}
+
+function fson(){
+a = eval(document.hesap.a0.value);
+b = eval(document.hesap.b0.value);
+islem = document.hesap.is0.value;
+
+switch(islem){
+case "t":topla(); break;
+case "p":carp(); break;
+case "b":bol(); break;
+case "c":cik(); break;
+}
+
+
+
+alert("Ýslem sonucu:" + sonuc);  //javascript mesaja yazma ;
+document.getElementById("genel").innerHTML ="Islem sonucu: " + sonuc ; //html'e yazma;
+deniz.value="islem sonucu: " +sonuc;      //html text butona yazma ;
+// sonuc=document.getElementById("deniz"); // text buton'dan javascripte deger alma
+} 
+</script>
+
+<body bgcolor=lightpink>
+
+<h1> Hesap makinasý </h1>
+
+<form name="hesap">
+	1.sayi :<input type="text" name=a0> <br>
+	2.sayi :<input type="field" name=b0> <br>
+	        ( toplam(t) - cikarma(c) - carpma(p) - bolme(b) ):<br>
+	        <input type="field" name=is0 >  <br> <br>
+	 <input type="button" value=" = " name=calis size=10 onClick="fson()" > <br> <br>
+         <input type="field" value="" id=deniz size=15>
+</form>
+
+<p id="genel"></p>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> hesap makinası </title>
+</head>
+
+<body bgcolor=lightpink>
+
+<h1> Hesap makinas </h1>
+<font color=blue size=7>
+<p id="genel"></p>  </font>
+
+<script>
+
+islem = prompt(" Hangi islemi yapmak istersiniz?\n(toplam(t) - cikarma(c) - carpma(p) - bolme(b) )");
+a = prompt("�lk say�y� girin");
+b = prompt("�kinci say�y� girin");
+
+function topla (){
+ sonuc = parseInt(a)+ parseInt(b);
+}
+function carp(){
+sonuc = parseInt(a) * parseInt(b);
+}
+
+function bol(){
+sonuc = parseInt(a) / parseInt(b);
+}
+
+function cik(){
+sonuc = parseInt(a) - parseInt(b);
+}
+
+/*
+switch(islem){
+case "t":topla(); break;
+case "p":carp(); break;
+case "b":bol(); break;
+case "c":cik(); break;
+}
+*/
+if(islem=='t')  topla(); 
+if(islem=='p')  carp(); 
+if(islem=='b')  bol(); 
+if(islem=='c')  cik(); 
+
+alert("�slem sonucu:" + "  " + sonuc);
+document.getElementById("genel").innerHTML =
+"Islem sonucu: " + sonuc ; 
+document.write("�slem degeri:" + sonuc+"<br>"); 
+document.writeln("---------------------");
+// write ile writeln di�er dillerde farkl� kullan�l�r,burada ise ayn� durumdad�r  
+</script>
+
+
+</body>

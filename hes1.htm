@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+<title>dort islem</title>
+<meta charset = "utf-8">
+<script type="text/JavaScript">
+function toplama(s1, s2){
+var toplam = s1 + s2;
+return toplam;
+}
+function cikarma(s1, s2){
+var cikar = s1 - s2;
+return cikar;
+}
+function carpma(s1, s2){
+var carp = s1 * s2;
+return carp;
+}
+function bolme(s1, s2){
+var bol = s1 / s2;
+return bol;
+}
+</script>
+</head>
+<body>
+<script type="text/JavaScript">
+var t1 = prompt("Birinci Sayi: ");
+var t2 = prompt("İkinci Sayi: ");
+say1 = parseInt(t1);
+say2 = parseInt(t2)
+islem1 = toplama(say1, say2);
+islem2 = cikarma(say1, say2);
+islem3 = carpma(say1, say2);
+islem4 = bolme(say1, say2);
+document.write("Girilen Sayilar: " + say1 + " ve " +
+say2);
+document.write("<HR>");
+document.write("a + b = " + islem1 + "<BR>");
+document.write("a - b = " + islem2 + "<BR>");
+document.write("a * b = " + islem3 + "<BR>");
+document.write("a / b = " + islem4 + "<BR>");
+</script>
+</body>
+</html>
+

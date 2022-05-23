@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <TITLE> fonksiyon </TITLE>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        function mer()
+        {
+            window.alert("hesap makinası ornegi")
+        }
+
+        function topla(a,b)
+        {
+            return parseInt(a) + parseInt(b)
+        }
+
+        function cik(a,b)
+        {
+            return parseInt(a) - parseInt(b)
+        }
+
+        function carp(a,b)
+        {
+            return parseInt(a) * parseInt(b)
+        }
+        function bol(a,b)
+        {
+            return parseInt(a) / parseInt(b)
+        }
+
+    </script>
+</head>
+<body>
+<script type="text/javascript">
+    mer()
+
+    deg1 = prompt("1.sayı....:","")
+    deg2 = prompt("2.sayi ...:","")
+    isl = prompt("islemi giriniz(+-/*)..:","")
+
+    if (isl==="+") {
+        c=topla(deg1,deg2)
+        document.writeln(c)
+    }
+
+    if (isl==="-") {
+        c=cik(deg1,deg2)
+        alert(c)
+    }
+
+    if (isl==="*") {
+        document.write(carp(deg1,deg2))
+    }
+
+    if (isl==="/") {
+        alert("sonuc..:" + bol(deg1,deg2))
+    }
+</script>
+</body>
+</html>

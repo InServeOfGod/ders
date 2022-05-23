@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>hesap makinası </title>
+
+<style>
+.ilk {
+      height: 50px;
+      width: 308px;
+     }
+
+.button {
+     height: 50px;
+     width: 100px;
+     }
+
+.islem {
+     height: 50px;
+     width: 74px;
+     }
+</style>
+
+<script language="javascript">
+ 
+  var tt 
+  var islem 
+  //var say1 = 0
+  var say1
+  var say2 
+
+function temizle()
+{ 
+  document.fhesap.sonuc.value = ''
+} 
+
+function hesapla(gelen)
+{
+  say1 = eval(document.fhesap.sonuc.value)
+  islem=gelen
+  temizle()
+} 
+
+function deniz()
+{
+  var say2 = eval(document.fhesap.sonuc.value)
+  temizle()
+  /* if (islem == "+") 
+  {tt = say1 + say2 }   */
+
+  if (islem == "+") tt = say1 + say2 
+  if (islem == "-") tt = say1 - say2 
+  if (islem == "/") tt = say1 / say2
+  if (islem == "*") tt = say1 * say2
+  document.fhesap.sonuc.value = tt
+} 
+
+function sayiyaz(rakam)
+{
+  document.fhesap.sonuc.value += rakam
+}
+</script>
+
+</head>
+
+<body>
+<form name="fhesap">
+<input class="ilk" type="field" name="sonuc"  align="right">
+<br>
+<input type="button" name="7" value="7" class="button" onClick="sayiyaz(7)">
+<input type="button" name="8" value="8" class="button" onClick="sayiyaz(8)">
+<input type="button" name="9" value="9" class="button" onClick="sayiyaz(9)">
+<br>
+<input type="button" name="4" value="4" class="button" onClick="sayiyaz(4)">
+<input type="button" name="5" value="5" class="button" onClick="sayiyaz(5)">
+<input type="button" name="6" value="6" class="button" onClick="sayiyaz(6)">
+<br>
+<input type="button" name="1" value="1" class="button" onClick="sayiyaz(1)">
+<input type="button" name="2" value="2" class="button" onClick="sayiyaz(2)">
+<input type="button" name="3" value="3" class="button" onClick="sayiyaz(3)">
+<br>
+<input type="button" name="0" value="0" class="button" onClick="sayiyaz(0)">
+<input type="button" name="C" value="C" class="button" onClick="temizle()">
+<input type="button" name="=" value="=" class="button" onClick="deniz()">
+<br>
+<input type="button" name="+" value="+" class="islem" onClick="hesapla('+')">
+<input type="button" name="-" value="-" class="islem" onClick="hesapla('-')">
+<input type="button" name="*" value="*" class="islem" onClick="hesapla('*')">
+<input type="button" name="/" value="/" class="islem" onClick="hesapla('/')">
+</form>
+</body>
+</html>
